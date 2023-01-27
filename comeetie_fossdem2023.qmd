@@ -1,0 +1,26 @@
+---
+title: "Webmapping and massive statistical data, a democratization story"
+author: "Etienne Côme, @comeetie@mapstodon.space, FOSSDEM 2023"
+date: 03/02/2023
+format: 
+  revealjs:
+    theme: [default, uge.scss]
+title-slide-attributes:
+  data-background-image: "./logo_univ_gustave_eiffel_rvb.svg"
+  data-background-size: "25%"
+  data-background-position: "bottom 50px right 100px"
+---
+
+## @comeetie
+
+![](https://www.comeetie.fr/assets/img/portrait.png){ width=30% }
+
+Researcher Gustave Eiffel University COSYS/GRETTIA </br>
+Stats, Data, Visualisation, Carto, Transports,...</br>
+R,JS,Python,Cpp,...
+
+## Francepixels
+
+Going back in 2014 !
+
+
