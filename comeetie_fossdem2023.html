@@ -366,75 +366,76 @@ Etienne Côme, <span class="citation" data-cites="comeetie">@comeetie</span><spa
 <p>open data but :</p>
 <div>
 <ul>
-<li class="fragment">heavy files with tricky file format</li>
-<li class="fragment">only usable with pain</li>
+<li class="fragment">heavy files with tricky file formats and projection problems</li>
+<li class="fragment">only usable with <span style="color:var(--alert-color)">pain</span></li>
 <li class="fragment">on dedicated software mapinfo / arcgis / qgis</li>
 </ul>
 </div>
 </section>
 <section id="an-opportunity" class="slide level2">
 <h2>An opportunity</h2>
-<p>Webmapping stack developped around the OSM project</p>
+<p>Webmapping stack developped around the <span style="color:var(--alert-color)">OSM</span> project</p>
 <ul>
 <li><a href="https://openlayers.org/">openLayer</a></li>
 <li><a href="https://www.leaflet.org/">leaflet</a>,</li>
 <li><a href="https://web.archive.org/web/20140605004029/https://www.mapbox.com/">mapbox tools of the time (tilemill,…)</a></li>
 </ul>
-<p><span class="math inline">\(\Rightarrow\)</span> would allow to renew the data diffusion/visualiation approaches</p>
+<p><span style="color:var(--alert-color)"><span class="math inline">\(\Rightarrow\)</span> would allow to renew the data diffusion/visualiation approaches</span></p>
 </section>
-<section id="some-context-1" class="slide level2">
-<h2>Some context</h2>
-<p>Not the only one to see this opportunity <br> Oliver O’Brien did a quite similar proposal in the Uk in 2015 with data-shine</p>
+<section id="an-opportunity-1" class="slide level2">
+<h2>An opportunity</h2>
+<p>Not the only one to see this opportunity <br></p>
+<p>Oliver O’Brien did a quite similar proposal in the Uk in 2015 with data-shine</p>
 
 <img data-src="./images/obrien.png" style="width:80.0%" class="r-stretch"></section>
 <section id="section-2" class="slide level2" data-background-image="./images/datshine.png">
 <h2></h2>
 </section>
-<section id="francepixels-technical-details-and-choices" class="slide level2">
-<h2>Francepixels, Technical details and choices</h2>
-<p>At that time vector tiles were slowly comming</p>
+<section id="technical-details-and-choices" class="slide level2">
+<h2>Technical details and choices</h2>
+<p>At that time <span style="color:var(--alert-color)">vector tiles</span> were slowly comming</p>
 <ul>
 <li><a href="http://mike.teczno.com/notes/postgreslessness-mapnik-vectiles.html">http://mike.teczno.com/notes/postgreslessness-mapnik-vectiles.html</a></li>
 <li><a href="https://observablehq.com/@d3/vector-tiles">https://observablehq.com/<span class="citation" data-cites="d3/vector-tiles">@d3/vector-tiles</span></a></li>
 <li><a href="https://gist.github.com/wboykinm/7393674">https://gist.github.com/wboykinm/7393674</a></li>
 </ul>
-<p><span class="math inline">\(\Rightarrow\)</span> Massive advantage for statistical data</p>
+<p><span style="color:var(--alert-color)"><span class="math inline">\(\Rightarrow\)</span> Massive advantage for statistical data</span></p>
 </section>
-<section id="francepixels-technical-details-and-choices-1" class="slide level2">
+<section id="francepixels-technical-details-and-choices" class="slide level2">
 <h2>Francepixels, Technical details and choices</h2>
-<p>tools chain :</p>
+<p>Tool-chain :</p>
 <ul>
 <li>R to process the data and export geojson vector tiles</li>
 <li>leaflet for raster tiles</li>
 <li>d3 hook to render “vectors tiles” on canvas</li>
 <li>invisible canvas tiles for interactivivity</li>
-<li>details matter (color scales/map background labels)</li>
+<li>details matter (color scales/map background/labels)</li>
 </ul>
 <p><a href="https://www.comeetie.fr/galerie/francepixels/#map/p65/vardefault/12/48.860/2.333">try it, still usable</a></p>
 </section>
 <section id="maup-and-multiscale-aggregation" class="slide level2">
 <h2>MAUP and multiscale aggregation</h2>
-<p>The modifiable areal unit problem (MAUP) is a statistical bias that occurs when you aggregate point data.</p>
+<p>The modifiable areal unit problem <span style="color:var(--alert-color)">(MAUP)</span> is a statistical bias that occurs when you aggregate point data.</p>
 <p><img data-src="./images/MAUP-Scale-Effect-425x212.png" style="height:50.0%"></p>
 <p><a href="https://gisgeography.com/maup-modifiable-areal-unit-problem/">see, https://gisgeography.com/maup-modifiable-areal-unit-problem/</a></p>
 </section>
 <section id="maup-and-multiscale-aggregation-1" class="slide level2">
 <h2>MAUP and multiscale aggregation</h2>
-<p>The modifiable areal unit problem (MAUP) is a statistical bias that occurs when you aggregate point data.</p>
-<p><span class="math inline">\(\rightarrow\)</span> try aggregating the raw data at different scales and link them with zoom levels</p>
+<p>The modifiable areal unit problem <span style="color:var(--alert-color)">(MAUP)</span> is a statistical bias that occurs when you aggregate point data.</p>
+<p><span style="color:var(--alert-color)"><span class="math inline">\(\rightarrow\)</span> try aggregating the raw data at different scales and link them with zoom levels</span></p>
 <p>solve two problems :</p>
 <div>
 <ul>
-<li class="fragment">vector tiles sizes !! we need to keep them small</li>
-<li class="fragment">MAUP !! we want to explore several aggregation scales</li>
+<li class="fragment">vector tiles sizes <span style="color:var(--alert-color)">!! we need to keep them small</span></li>
+<li class="fragment">MAUP <span style="color:var(--alert-color)">!! we want to explore several aggregation scales</span></li>
 </ul>
 </div>
 </section>
-<section id="section-3" class="slide level2" data-background-image="https://www.comeetie.fr/galerie/francepixels/assets/images/paris_vieux2.jpg)">
+<section id="section-3" class="slide level2" data-background-image="https://www.comeetie.fr/galerie/francepixels/assets/images/paris_vieux2.jpg">
 <h2></h2>
 </section>
-<section id="francepixels-feedbacks-and-users" class="slide level2">
-<h2>Francepixels, feedbacks and users</h2>
+<section id="feedbacks-and-users" class="slide level2">
+<h2>Feedbacks and users</h2>
 <ul>
 <li>INSEE</li>
 <li>Journalists, on specific topics eg. segregation and school</li>
@@ -465,19 +466,20 @@ Etienne Côme, <span class="citation" data-cites="comeetie">@comeetie</span><spa
 <li>mapbox-gl / mapLibre for webmapping</li>
 </ul>
 </section>
-<section id="francepixels" class="slide level2">
-<h2>Francepixels,</h2>
-<p>successors:</p>
+<section id="francepixels-successors" class="slide level2">
+<h2>Francepixels successors</h2>
 <div>
 <ul>
 <li class="fragment"><a href="https://www.comeetie.fr/galerie/francepixels2019/">FrancePixels 2019</a> new data from insee<br>
 </li>
 <li class="fragment"><a href="https://www.comeetie.fr/galerie/francepixelsbati">FrancePixels Bati</a> custom aggreation of IGN BD Topo on side topics</li>
 <li class="fragment"><a href="https://www.comeetie.fr/galerie/francepixels2023bis">FrancePixels 2023</a> new data from insee + temporal evolution</li>
+<li class="fragment"><a href="https://eurostat.github.io/gridviz/">gridViz by <span class="citation" data-cites="julgaf">@julgaf</span> (eurostats)</a></li>
+<li class="fragment"><a href="https://www.ons.gov.uk/census/maps/choropleth/identity/sexual-orientation/sexual-orientation-4a/lesbian-gay-bisexual-or-other-lgb">datashine successor</a></li>
+<li class="fragment">insee project</li>
 <li class="fragment">…</li>
 </ul>
 </div>
-<p>and also <a href="https://eurostat.github.io/gridviz/">https://eurostat.github.io/gridviz/</a> and insee project</p>
 </section>
 <section id="thanks" class="title-slide slide level1 center">
 <h1>Thanks</h1>

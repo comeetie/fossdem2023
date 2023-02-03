@@ -45,8 +45,8 @@ Massive Grided statistical data
 open data but :
 
 ::: {.incremental}
-- heavy files with tricky file format
-- only usable with pain 
+- heavy files with tricky file formats and projection problems
+- only usable with <span style="color:var(--alert-color)">pain</span>
 - on dedicated software mapinfo / arcgis / qgis
 ::: 
 
@@ -54,17 +54,18 @@ open data but :
 
 ## An opportunity
 
-Webmapping stack developped around the OSM project
+Webmapping stack developped around the <span style="color:var(--alert-color)">OSM</span> project
 
 - [openLayer](https://openlayers.org/)
 - [leaflet](https://www.leaflet.org/), 
 - [mapbox tools of the time (tilemill,...)](https://web.archive.org/web/20140605004029/https://www.mapbox.com/)
 
-$\Rightarrow$ would allow to renew the data diffusion/visualiation approaches
+<span style="color:var(--alert-color)">$\Rightarrow$ would allow to renew the data diffusion/visualiation approaches</span>
 
-##  Some context
+##  An opportunity
 
 Not the only one to see this opportunity </br>
+
 Oliver O'Brien did a quite similar proposal in the Uk in 2015 with data-shine
 
 ![](./images/obrien.png){ width=80% }
@@ -74,33 +75,33 @@ Oliver O'Brien did a quite similar proposal in the Uk in 2015 with data-shine
 
 
 
-##  Francepixels, Technical details and choices
+##  Technical details and choices
 
-At that time vector tiles were slowly comming
+At that time <span style="color:var(--alert-color)">vector tiles</span> were slowly comming
 
 - [http://mike.teczno.com/notes/postgreslessness-mapnik-vectiles.html](http://mike.teczno.com/notes/postgreslessness-mapnik-vectiles.html)
 - [https://observablehq.com/@d3/vector-tiles](https://observablehq.com/@d3/vector-tiles)
 - [https://gist.github.com/wboykinm/7393674](https://gist.github.com/wboykinm/7393674)
 
-$\Rightarrow$ Massive advantage for statistical data
+<span style="color:var(--alert-color)">$\Rightarrow$ Massive advantage for statistical data</span>
 
 
 ##  Francepixels, Technical details and choices
 
-tools chain :
+Tool-chain :
 
 - R to process the data and export geojson vector tiles
 - leaflet for raster tiles 
 - d3 hook to render "vectors tiles" on canvas
 - invisible canvas tiles for interactivivity 
-- details matter (color scales/map background labels)
+- details matter (color scales/map background/labels)
 
 [try it, still usable](https://www.comeetie.fr/galerie/francepixels/#map/p65/vardefault/12/48.860/2.333)
 
 
 ## MAUP and multiscale aggregation
 
-The modifiable areal unit problem (MAUP) is a statistical bias that occurs when you aggregate point data.
+The modifiable areal unit problem <span style="color:var(--alert-color)">(MAUP)</span> is a statistical bias that occurs when you aggregate point data.
 
 ![](./images/MAUP-Scale-Effect-425x212.png){height=50%}
 
@@ -111,22 +112,22 @@ The modifiable areal unit problem (MAUP) is a statistical bias that occurs when 
 
 ## MAUP and multiscale aggregation
 
-The modifiable areal unit problem (MAUP) is a statistical bias that occurs when you aggregate point data.
+The modifiable areal unit problem <span style="color:var(--alert-color)">(MAUP)</span> is a statistical bias that occurs when you aggregate point data.
 
-$\rightarrow$ try aggregating the raw data at different scales and link them with zoom levels
+<span style="color:var(--alert-color)">$\rightarrow$ try aggregating the raw data at different scales and link them with zoom levels</span>
 
 solve two problems :
 
 ::: {.incremental}
-- vector tiles sizes !! we need to keep them small
-- MAUP !! we want to explore several aggregation scales
+- vector tiles sizes <span style="color:var(--alert-color)">!! we need to keep them small</span>
+- MAUP <span style="color:var(--alert-color)">!! we want to explore several aggregation scales</span>
 :::
 
 
-## {background-image="https://www.comeetie.fr/galerie/francepixels/assets/images/paris_vieux2.jpg)"}
+## {background-image="https://www.comeetie.fr/galerie/francepixels/assets/images/paris_vieux2.jpg"}
 
 
-## Francepixels, feedbacks and users
+## Feedbacks and users
 
 - INSEE
 - Journalists, on specific topics eg. segregation and school
@@ -137,7 +138,7 @@ solve two problems :
 
 ## Francepixels, evolutions
 
-Vector tiles have since then maturated 
+Vector tiles have since become a mature technology 
 
 - MVT format [specifications 1.0 and 2.0](https://mapbox.github.io/vector-tile-spec/)
 
@@ -156,18 +157,19 @@ A lot easier now :
 - mapbox-gl / mapLibre for webmapping
 
 
-## Francepixels, 
-
-successors:
+## Francepixels successors 
 
 ::: {.incremental}
 - [FrancePixels 2019](https://www.comeetie.fr/galerie/francepixels2019/) new data from insee  
 - [FrancePixels Bati](https://www.comeetie.fr/galerie/francepixelsbati) custom aggreation of IGN BD Topo on side topics
 - [FrancePixels 2023](https://www.comeetie.fr/galerie/francepixels2023bis) new data from insee + temporal evolution
+- [gridViz by @julgaf (eurostats)](https://eurostat.github.io/gridviz/) 
+- [datashine successor](https://www.ons.gov.uk/census/maps/choropleth/identity/sexual-orientation/sexual-orientation-4a/lesbian-gay-bisexual-or-other-lgb)
+- insee project
 - ...
 :::
 
-and also [https://eurostat.github.io/gridviz/](https://eurostat.github.io/gridviz/) and insee project 
+
 
 
 # Thanks
