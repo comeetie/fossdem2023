@@ -19,8 +19,159 @@ Researcher Gustave Eiffel University COSYS/GRETTIA </br>
 Stats, Data, Visualisation, Carto, Transports,...</br>
 R,JS,Python,Cpp,...
 
-## Francepixels
+## Francepixels, some context {background-image="./images/feuilleimpotswhite2.jpg"}
 
+<div style="background-color:#ffffffbb">
 Going back in 2014 !
 
+Massive Grided statistical data 
+
+
+::: {.incremental}
+- derived from tax sheets
+- 200m x 200m pixels
+- limit of the statistical secret (11 households)
+:::
+
+</div>
+
+## {background-image="./images/insee2014v2.png"}
+
+## {background-image="./images/inseeqgis.png"}
+
+
+## Some context 
+
+open data but :
+
+::: {.incremental}
+- heavy files with tricky file format
+- only usable with pain 
+- on dedicated software mapinfo / arcgis / qgis
+::: 
+
+
+
+## An opportunity
+
+Webmapping stack developped around the OSM project
+
+- [openLayer](https://openlayers.org/)
+- [leaflet](https://www.leaflet.org/), 
+- [mapbox tools of the time (tilemill,...)](https://web.archive.org/web/20140605004029/https://www.mapbox.com/)
+
+$\Rightarrow$ would allow to renew the data diffusion/visualiation approaches
+
+##  Some context
+
+Not the only one to see this opportunity </br>
+Oliver O'Brien did a quite similar proposal in the Uk in 2015 with data-shine
+
+![](./images/obrien.png){ width=80% }
+
+## {background-image="./images/datshine.png"}
+
+
+
+
+##  Francepixels, Technical details and choices
+
+At that time vector tiles were slowly comming
+
+- [http://mike.teczno.com/notes/postgreslessness-mapnik-vectiles.html](http://mike.teczno.com/notes/postgreslessness-mapnik-vectiles.html)
+- [https://observablehq.com/@d3/vector-tiles](https://observablehq.com/@d3/vector-tiles)
+- [https://gist.github.com/wboykinm/7393674](https://gist.github.com/wboykinm/7393674)
+
+$\Rightarrow$ Massive advantage for statistical data
+
+
+##  Francepixels, Technical details and choices
+
+tools chain :
+
+- R to process the data and export geojson vector tiles
+- leaflet for raster tiles 
+- d3 hook to render "vectors tiles" on canvas
+- invisible canvas tiles for interactivivity 
+- details matter (color scales/map background labels)
+
+[try it, still usable](https://www.comeetie.fr/galerie/francepixels/#map/p65/vardefault/12/48.860/2.333)
+
+
+## MAUP and multiscale aggregation
+
+The modifiable areal unit problem (MAUP) is a statistical bias that occurs when you aggregate point data.
+
+![](./images/MAUP-Scale-Effect-425x212.png){height=50%}
+
+[see, https://gisgeography.com/maup-modifiable-areal-unit-problem/](https://gisgeography.com/maup-modifiable-areal-unit-problem/)
+
+
+
+
+## MAUP and multiscale aggregation
+
+The modifiable areal unit problem (MAUP) is a statistical bias that occurs when you aggregate point data.
+
+$\rightarrow$ try aggregating the raw data at different scales and link them with zoom levels
+
+solve two problems :
+
+::: {.incremental}
+- vector tiles sizes !! we need to keep them small
+- MAUP !! we want to explore several aggregation scales
+:::
+
+
+## {background-image="https://www.comeetie.fr/galerie/francepixels/assets/images/paris_vieux2.jpg)"}
+
+
+## Francepixels, feedbacks and users
+
+- INSEE
+- Journalists, on specific topics eg. segregation and school
+- Urbanists for territorial diagnosis
+- Transportation researchers
+- Grided data user 
+- Curious people ...
+
+## Francepixels, evolutions
+
+Vector tiles have since then maturated 
+
+- MVT format [specifications 1.0 and 2.0](https://mapbox.github.io/vector-tile-spec/)
+
+and are no widely available
+
+- [postgis can now produce mapbox vector tiles](https://postgis.net/docs/ST_AsMVT.html)
+- new webmapping tools [mapbox-gl](https://www.mapbox.com/mapbox-gljs) -> [MapLibre](https://maplibre.org/projects/),...
+
+
+## Francepixels, evolutions
+
+A lot easier now :
+
+- [pypixgrid](https://github.com/comeetie/pypixgrid) python script to export MVT tiles from postgis
+- [customizable multiscale aggregation](https://github.com/comeetie/pypixgrid/blob/main/exemples/insee/reunion/config_reunion.json)
+- mapbox-gl / mapLibre for webmapping
+
+
+## Francepixels, 
+
+successors:
+
+::: {.incremental}
+- [FrancePixels 2019](https://www.comeetie.fr/galerie/francepixels2019/) new data from insee  
+- [FrancePixels Bati](https://www.comeetie.fr/galerie/francepixelsbati) custom aggreation of IGN BD Topo on side topics
+- [FrancePixels 2023](https://www.comeetie.fr/galerie/francepixels2023bis) new data from insee + temporal evolution
+- ...
+:::
+
+and also [https://eurostat.github.io/gridviz/](https://eurostat.github.io/gridviz/) and insee project 
+
+
+# Thanks
+
+
+Questions ? Feedback 
 
