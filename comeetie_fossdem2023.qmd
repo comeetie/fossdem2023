@@ -162,10 +162,10 @@ A lot easier now :
 ::: {.incremental}
 - [FrancePixels 2019](https://www.comeetie.fr/galerie/francepixels2019/) new data from insee  
 - [FrancePixels Bati](https://www.comeetie.fr/galerie/francepixelsbati) custom aggreation of IGN BD Topo on side topics
-- [FrancePixels 2023](https://www.comeetie.fr/galerie/francepixels2023bis) new data from insee + temporal evolution
+- [FrancePixels 2023](https://www.comeetie.fr/galerie/francepixels2023) new data from insee + temporal evolution
 - [gridViz by @julgaf (eurostats)](https://eurostat.github.io/gridviz/) 
 - [datashine successor](https://www.ons.gov.uk/census/maps/choropleth/identity/sexual-orientation/sexual-orientation-4a/lesbian-gay-bisexual-or-other-lgb)
-- insee project
+- INSEE project
 - ...
 :::
 
